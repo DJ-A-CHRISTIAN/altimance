@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nos Partenaires - ALTIMANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#135bec", "background-light": "#f6f6f8", "background-dark": "#101622" },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div id="navbar-container"></div>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="w-full bg-gradient-to-br from-primary/5 to-blue-50 dark:from-primary/10 dark:to-background-dark py-20 md:py-32 px-4 md:px-10">
+            <div class="max-w-[1200px] mx-auto text-center">
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white mb-6">
+                    Nos <span class="text-primary">Partenaires</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-[700px] mx-auto leading-relaxed">
+                    Ensemble, nous construisons l'excellence technologique de demain
+                </p>
+            </div>
+        </section>
+
+        <!-- Partners Grid -->
+        <section class="py-16 md:py-24 px-4 md:px-10 bg-white dark:bg-background-dark">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-primary font-bold text-sm uppercase tracking-wider mb-2">Écosystème</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Partenaires Technologiques
+                    </h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Partner Cards -->
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-lg">
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-5xl">cloud</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Microsoft Azure</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Cloud Partner</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-lg">
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-5xl">security</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Fortinet</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Cybersécurité</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-lg">
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-5xl">dns</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">VMware</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Virtualisation</p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 flex items-center justify-center border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-lg">
+                        <div class="text-center">
+                            <div
+                                class="w-24 h-24 mx-auto mb-4 bg-primary/10 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary text-5xl">storage</span>
+                            </div>
+                            <h4 class="font-bold text-slate-900 dark:text-white">Dell Technologies</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 md:py-24 px-4 md:px-10 bg-gradient-to-br from-primary to-blue-700">
+            <div class="max-w-[800px] mx-auto text-center text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Devenez Partenaire</h2>
+                <p class="text-lg mb-8 opacity-90">
+                    Rejoignez notre réseau de partenaires et développons ensemble des solutions innovantes pour nos
+                    clients.
+                </p>
+                <button onclick="window.location.href='contactus.html'"
+                    class="bg-white text-primary hover:bg-slate-100 font-bold py-4 px-8 rounded-lg transition-all shadow-lg">
+                    Nous Contacter
+                </button>
+            </div>
+        </section>
+    </main>
+    <div id="footer-container"></div>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script src="enhanced.js"></script>
+</body>
+
+</html>

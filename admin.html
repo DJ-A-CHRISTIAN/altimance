@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Admin ALTIMANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#135bec" },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 font-display">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-slate-200 sticky top-0 z-50">
+        <div class="px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <div class="w-8 h-8 text-primary">
+                        <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                                fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h1 class="text-xl font-bold text-slate-900">Dashboard Admin</h1>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span class="text-sm text-slate-600" id="user-name"></span>
+                    <button onclick="logout()"
+                        class="flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+                        <span class="material-symbols-outlined text-lg">logout</span>
+                        Déconnexion
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-white border-r border-slate-200 min-h-screen p-6">
+            <nav class="space-y-2">
+                <button onclick="showSection('dashboard')"
+                    class="nav-item active flex items-center gap-3 w-full px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Tableau de bord
+                </button>
+                <button onclick="showSection('contacts')"
+                    class="nav-item flex items-center gap-3 w-full px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <span class="material-symbols-outlined">mail</span>
+                    Contacts
+                    <span id="contacts-badge"
+                        class="ml-auto bg-primary text-white text-xs px-2 py-1 rounded-full hidden">0</span>
+                </button>
+                <button onclick="showSection('applications')"
+                    class="nav-item flex items-center gap-3 w-full px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <span class="material-symbols-outlined">badge</span>
+                    Candidatures
+                    <span id="apps-badge"
+                        class="ml-auto bg-primary text-white text-xs px-2 py-1 rounded-full hidden">0</span>
+                </button>
+                <button onclick="showSection('opportunities')"
+                    class="nav-item flex items-center gap-3 w-full px-4 py-3 rounded-lg font-semibold transition-colors">
+                    <span class="material-symbols-outlined">work</span>
+                    Opportunités
+                </button>
+                <a href="index.html"
+                    class="flex items-center gap-3 w-full px-4 py-3 rounded-lg font-semibold text-slate-600 hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined">home</span>
+                    Voir le site
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-8">
+            <!-- Section Dashboard -->
+            <div id="section-dashboard" class="section">
+                <h2 class="text-2xl font-bold text-slate-900 mb-6">Vue d'ensemble</h2>
+
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-primary">mail</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-slate-900 mb-1" id="stat-total-contacts">-</div>
+                        <div class="text-sm text-slate-600">Messages reçus</div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-green-600">badge</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-slate-900 mb-1" id="stat-total-apps">-</div>
+                        <div class="text-sm text-slate-600">Candidatures</div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-purple-600">trending_up</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-slate-900 mb-1" id="stat-recent">-</div>
+                        <div class="text-sm text-slate-600">Nouveaux (7j)</div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                                <span class="material-symbols-outlined text-orange-600">schedule</span>
+                            </div>
+                        </div>
+                        <div class="text-3xl font-bold text-slate-900 mb-1" id="stat-pending">-</div>
+                        <div class="text-sm text-slate-600">En attente</div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">Contacts par statut</h3>
+                        <canvas id="contactsChart"></canvas>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">Candidatures par statut</h3>
+                        <canvas id="applicationsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Contacts -->
+            <div id="section-contacts" class="section hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Messages de contact</h2>
+                    <button onclick="loadContacts()"
+                        class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        <span class="material-symbols-outlined">refresh</span>
+                        Actualiser
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Nom</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Email
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">
+                                        Entreprise</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Sujet
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Statut
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="contacts-table" class="divide-y divide-slate-200">
+                                <tr>
+                                    <td colspan="7" class="px-6 py-8 text-center text-slate-500">
+                                        <span class="material-symbols-outlined text-4xl mb-2">inbox</span>
+                                        <p>Chargement...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Candidatures -->
+            <div id="section-applications" class="section hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Candidatures reçues</h2>
+                    <button onclick="loadApplications()"
+                        class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                        <span class="material-symbols-outlined">refresh</span>
+                        Actualiser
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Date</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Nom</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Email
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Téléphone
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Poste
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Statut
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="applications-table" class="divide-y divide-slate-200">
+                                <tr>
+                                    <td colspan="7" class="px-6 py-8 text-center text-slate-500">
+                                        <span class="material-symbols-outlined text-4xl mb-2">inbox</span>
+                                        <p>Chargement...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Section Opportunités -->
+            <div id="section-opportunities" class="section hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-2xl font-bold text-slate-900">Offres d'emploi</h2>
+                    <div class="flex gap-3">
+                        <button onclick="loadOpportunities()"
+                            class="flex items-center gap-2 px-4 py-2 border border-slate-300 text-slate-700 rounded-lg font-semibold hover:bg-slate-50 transition-colors">
+                            <span class="material-symbols-outlined">refresh</span>
+                            Actualiser
+                        </button>
+                        <button onclick="openOpportunityModal()"
+                            class="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+                            <span class="material-symbols-outlined">add</span>
+                            Nouvelle offre
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl border border-slate-200 overflow-hidden">
+                    <div class="overflow-x-auto">
+                        <table class="w-full">
+                            <thead class="bg-slate-50 border-b border-slate-200">
+                                <tr>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Titre
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">
+                                        Localisation</th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Contrat
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Salaire
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Statut
+                                    </th>
+                                    <th class="px-6 py-3 text-left text-xs font-bold text-slate-700 uppercase">Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="opportunities-table" class="divide-y divide-slate-200">
+                                <tr>
+                                    <td colspan="6" class="px-6 py-8 text-center text-slate-500">
+                                        <span class="material-symbols-outlined text-4xl mb-2">work_off</span>
+                                        <p>Chargement...</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal Opportunité -->
+    <div id="opportunity-modal" class="fixed inset-0 bg-black/50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b border-slate-200 flex justify-between items-center sticky top-0 bg-white z-10">
+                <h3 class="text-xl font-bold text-slate-900" id="modal-title">Nouvelle Opportunité</h3>
+                <button onclick="closeOpportunityModal()" class="text-slate-500 hover:text-slate-700">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+            <form id="opportunity-form" class="p-6 space-y-4">
+                <input type="hidden" id="opp-id">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Titre du poste</label>
+                        <input type="text" id="opp-title" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Localisation</label>
+                        <input type="text" id="opp-location" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Type de contrat</label>
+                        <select id="opp-contract" required
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                            <option value="CDI">CDI</option>
+                            <option value="CDD">CDD</option>
+                            <option value="Freelance">Freelance</option>
+                            <option value="Stage">Stage</option>
+                            <option value="Alternance">Alternance</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">Salaire (optionnel)</label>
+                        <input type="text" id="opp-salary" placeholder="ex: 35k - 45k"
+                            class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Description</label>
+                    <textarea id="opp-description" required rows="4"
+                        class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">Prérequis (optionnel)</label>
+                    <textarea id="opp-requirements" rows="3"
+                        class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary"></textarea>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <input type="checkbox" id="opp-published"
+                        class="w-4 h-4 text-primary border-slate-300 rounded focus:ring-primary">
+                    <label for="opp-published" class="text-sm font-semibold text-slate-700">Publier
+                        immédiatement</label>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-4 border-t border-slate-200 mt-6">
+                    <button type="button" onclick="closeOpportunityModal()"
+                        class="px-4 py-2 text-slate-700 font-semibold hover:bg-slate-100 rounded-lg transition-colors">Annuler</button>
+                    <button type="submit"
+                        class="px-6 py-2 bg-primary text-white font-bold rounded-lg hover:bg-blue-700 transition-colors shadow-lg shadow-primary/20">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>

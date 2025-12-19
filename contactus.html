@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact ALTIMANCE - Services IT &amp; Conseil</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] dark:text-white">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- Navigation -->
+        <div id="navbar-container"></div>
+        <!-- Main Content -->
+        <main class="flex-grow">
+            <!-- Hero Header -->
+            <div
+                class="bg-white dark:bg-[#1a2332] py-16 px-4 md:px-10 text-center border-b border-[#f0f2f4] dark:border-gray-800">
+                <div class="max-w-[800px] mx-auto">
+                    <h1
+                        class="text-[#111318] dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] mb-4">
+                        Commençons une Conversation
+                    </h1>
+                    <p class="text-[#616f89] dark:text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
+                        Associez-vous à ALTIMANCE pour votre transformation numérique. Que vous ayez besoin de conseil
+                        IT, de support pour les nouvelles technologies ou d'accompagnement utilisateur, nous sommes là
+                        pour vous aider.
+                    </p>
+                </div>
+            </div>
+            <!-- Content Container -->
+            <div class="layout-container flex justify-center py-12 px-4 md:px-10">
+                <div class="layout-content-container flex flex-col lg:flex-row gap-12 max-w-[1200px] w-full">
+                    <!-- Left Column: Contact Form -->
+                    <div class="flex-1 w-full lg:max-w-[600px]">
+                        <div
+                            class="bg-white dark:bg-[#1a2332] rounded-xl shadow-sm border border-[#e5e7eb] dark:border-gray-700 p-8">
+                            <h2
+                                class="text-[#111318] dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em] mb-6">
+                                Envoyez-nous un message</h2>
+                            <form class="flex flex-col gap-6" id="contact-form">
+                                <div class="flex flex-col md:flex-row gap-4">
+                                    <label class="flex flex-col flex-1">
+                                        <span
+                                            class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal pb-2">Nom
+                                            Complet</span>
+                                        <input id="contact-name"
+                                            class="form-input flex w-full rounded-lg border border-[#dbdfe6] dark:border-gray-600 bg-white dark:bg-[#252f3f] text-[#111318] dark:text-white h-12 px-4 placeholder:text-[#9ca3af] focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                            placeholder="Jean Dupont" type="text" />
+                                    </label>
+                                    <label class="flex flex-col flex-1">
+                                        <span
+                                            class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal pb-2">Email
+                                            Professionnel</span>
+                                        <input id="contact-email"
+                                            class="form-input flex w-full rounded-lg border border-[#dbdfe6] dark:border-gray-600 bg-white dark:bg-[#252f3f] text-[#111318] dark:text-white h-12 px-4 placeholder:text-[#9ca3af] focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                            placeholder="jean@entreprise.com" type="email" />
+                                    </label>
+                                </div>
+                                <label class="flex flex-col">
+                                    <span
+                                        class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal pb-2">Nom
+                                        de l'Entreprise</span>
+                                    <input id="contact-company"
+                                        class="form-input flex w-full rounded-lg border border-[#dbdfe6] dark:border-gray-600 bg-white dark:bg-[#252f3f] text-[#111318] dark:text-white h-12 px-4 placeholder:text-[#9ca3af] focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                        placeholder="Votre Entreprise" type="text" />
+                                </label>
+                                <label class="flex flex-col">
+                                    <span
+                                        class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal pb-2">Sujet</span>
+                                    <select id="contact-subject"
+                                        class="form-select flex w-full rounded-lg border border-[#dbdfe6] dark:border-gray-600 bg-white dark:bg-[#252f3f] text-[#111318] dark:text-white h-12 px-4 focus:border-primary focus:ring-1 focus:ring-primary transition-all">
+                                        <option>Demande Générale</option>
+                                        <option>Services de Conseil IT</option>
+                                        <option>Opportunités de Partenariat</option>
+                                        <option>Carrières</option>
+                                    </select>
+                                </label>
+                                <label class="flex flex-col">
+                                    <span
+                                        class="text-[#111318] dark:text-gray-300 text-sm font-medium leading-normal pb-2">Message</span>
+                                    <textarea id="contact-message"
+                                        class="form-textarea flex w-full rounded-lg border border-[#dbdfe6] dark:border-gray-600 bg-white dark:bg-[#252f3f] text-[#111318] dark:text-white min-h-[140px] p-4 placeholder:text-[#9ca3af] resize-y focus:border-primary focus:ring-1 focus:ring-primary transition-all"
+                                        placeholder="Comment pouvons-nous vous aider aujourd'hui ?"></textarea>
+                                </label>
+                                <button
+                                    class="mt-2 w-full cursor-pointer items-center justify-center rounded-lg h-12 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors shadow-md shadow-primary/20"
+                                    type="submit">
+                                    Envoyer le Message
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Right Column: Contact Info & Locations -->
+                    <div class="flex-1 w-full lg:max-w-[500px] flex flex-col gap-8">
+                        <!-- Contact Details Card -->
+                        <div
+                            class="bg-white dark:bg-[#1a2332] rounded-xl p-6 shadow-sm border border-[#e5e7eb] dark:border-gray-700">
+                            <h3 class="text-[#111318] dark:text-white text-xl font-bold mb-4 flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">contact_support</span>
+                                Informations de Contact
+                            </h3>
+                            <div class="flex flex-col gap-4">
+                                <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 transition-colors group"
+                                    href="mailto:contact@altimance.com">
+                                    <div
+                                        class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <span class="material-symbols-outlined text-xl">mail</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Envoyez-nous
+                                            un email</span>
+                                        <span
+                                            class="text-[#111318] dark:text-white font-medium">contact@altimance.com</span>
+                                    </div>
+                                </a>
+                                <a class="flex items-center gap-3 p-3 rounded-lg hover:bg-background-light dark:hover:bg-gray-800 transition-colors group"
+                                    href="tel:+33327000000">
+                                    <div
+                                        class="size-10 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                        <span class="material-symbols-outlined text-xl">call</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span
+                                            class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider">Appelez-nous</span>
+                                        <span class="text-[#111318] dark:text-white font-medium">+33 3 27 XX XX
+                                            XX</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Locations -->
+                        <div class="flex flex-col gap-6">
+                            <h3 class="text-[#111318] dark:text-white text-xl font-bold px-1">Nos Bureaux</h3>
+                            <!-- Location 1: Anzin -->
+                            <div
+                                class="overflow-hidden rounded-xl bg-white dark:bg-[#1a2332] shadow-sm border border-[#e5e7eb] dark:border-gray-700">
+                                <div class="relative h-48 w-full bg-gray-200">
+                                    <!-- Map Image Placeholder -->
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Vue de la carte de la zone d'Anzin montrant les rues et les parcs"
+                                        data-location="Anzin"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTij3Z2iL1gHlxPiMKQlejBU1mRkthDPu4Mj2ZxcimIWHHTnzvJSnXZ4EkLUMxtecVp6XdB4laLEGDS4lxXgBiybMSnZdDxO9C04zfsTOcy_H_re3Ti7OZxgS2BOIYIXBiML8KzdT5ZUSv64Pi2_YUq-EZ6bCcUF0ZaMayDTVL0IeEOmQo-_RAeZlbjGqM8l_DfYSF3gCokV9dU84MikdjVIO4ZA4SfyuEeCswaOK0nNDcpw_G3qQw5vVHaqf9Ts1r9nnpU-H1EwNh'); background-color: #e5e7eb;">
+                                        <!-- Fallback visual for demo purposes if API key is missing -->
+                                        <div
+                                            class="w-full h-full flex items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-400">
+                                            <span class="material-symbols-outlined text-6xl">map</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-white dark:bg-[#1a2332] px-3 py-1 rounded-full text-xs font-bold shadow-md text-[#111318] dark:text-white flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                                        Anzin
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="text-lg font-bold text-[#111318] dark:text-white mb-2">Bureau d'Anzin
+                                    </h4>
+                                    <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                        Parc des Rives de l'Escaut<br />
+                                        59410 Anzin, France
+                                    </p>
+                                    <a class="text-primary text-sm font-bold hover:underline inline-flex items-center gap-1"
+                                        href="#">
+                                        Obtenir l'itinéraire <span
+                                            class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Location 2: Valenciennes -->
+                            <div
+                                class="overflow-hidden rounded-xl bg-white dark:bg-[#1a2332] shadow-sm border border-[#e5e7eb] dark:border-gray-700">
+                                <div class="relative h-48 w-full bg-gray-200">
+                                    <!-- Map Image Placeholder -->
+                                    <div class="absolute inset-0 bg-cover bg-center"
+                                        data-alt="Vue de la carte de la zone de Valenciennes montrant les rues et les repères"
+                                        data-location="Valenciennes"
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5Y_39RYFoxEXMnMMQ503KUmGBicuG2fuVDC71oztejD8quFa_-Vh9FBRMgIt19eA5nOW7_qTD25PdK0IaQhy0kvcMkyLsafUDPVe5Zn-mdHjYwOFAqNQYb1oxx5C_V9wBCA_puchrvLzSiZUJxGTLvkftq-OVwe0sgK2MvGZbOzX3_BTZXSEB0JuFRBoto5IQzrsVbSOd_Hm9mlIiQLzntdXPX6RzJ_5c2m7ANRYRXwfns-t4XKTv7XN6QkGTW_73tbvbbakKMkvM'); background-color: #e5e7eb;">
+                                        <!-- Fallback visual for demo purposes -->
+                                        <div
+                                            class="w-full h-full flex items-center justify-center bg-slate-200 dark:bg-slate-700 text-slate-400">
+                                            <span class="material-symbols-outlined text-6xl">map</span>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="absolute top-4 right-4 bg-white dark:bg-[#1a2332] px-3 py-1 rounded-full text-xs font-bold shadow-md text-[#111318] dark:text-white flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-primary text-sm">location_on</span>
+                                        Valenciennes
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <h4 class="text-lg font-bold text-[#111318] dark:text-white mb-2">Bureau de
+                                        Valenciennes</h4>
+                                    <p class="text-[#616f89] dark:text-gray-400 text-sm leading-relaxed mb-4">
+                                        Technopôle Transalley<br />
+                                        59300 Valenciennes, France
+                                    </p>
+                                    <a class="text-primary text-sm font-bold hover:underline inline-flex items-center gap-1"
+                                        href="#">
+                                        Obtenir l'itinéraire <span
+                                            class="material-symbols-outlined text-sm">arrow_forward</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mt-4 p-4 rounded-lg bg-primary/5 border border-primary/10 text-center">
+                                <p class="text-sm text-[#616f89] dark:text-gray-400 font-medium">
+                                    ALTIMANCE est une filiale du <span class="text-primary font-bold">Groupe
+                                        Rigby</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <div id="footer-container"></div>
+    </div>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script src="api-integration.js"></script>
+    <script src="enhanced.js"></script>
+</body>
+
+</html>

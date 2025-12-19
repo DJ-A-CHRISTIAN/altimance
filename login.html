@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Admin ALTIMANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { "primary": "#135bec" },
+                    fontFamily: { "display": ["Manrope", "sans-serif"] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-gradient-to-br from-blue-50 to-slate-100 font-display min-h-screen flex items-center justify-center p-4">
+    <div class="w-full max-w-md">
+        <!-- Logo -->
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center gap-3 mb-4">
+                <div class="w-12 h-12 text-primary">
+                    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+                            fill="currentColor" />
+                    </svg>
+                </div>
+                <h1 class="text-3xl font-bold text-slate-900">ALTIMANCE</h1>
+            </div>
+            <p class="text-slate-600">Administration</p>
+        </div>
+
+        <!-- Carte de connexion -->
+        <div class="bg-white rounded-2xl shadow-xl p-8 border border-slate-200">
+            <h2 class="text-2xl font-bold text-slate-900 mb-6">Connexion</h2>
+
+            <!-- Message d'erreur -->
+            <div id="error-message" class="hidden mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <div class="flex items-center gap-2 text-red-700">
+                    <span class="material-symbols-outlined text-sm">error</span>
+                    <span id="error-text" class="text-sm font-semibold"></span>
+                </div>
+            </div>
+
+            <!-- Formulaire -->
+            <form id="login-form" class="space-y-5">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">
+                        Nom d'utilisateur
+                    </label>
+                    <input type="text" id="username" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        placeholder="admin" />
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">
+                        Mot de passe
+                    </label>
+                    <input type="password" id="password" required
+                        class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                        placeholder="••••••••" />
+                </div>
+
+                <button type="submit" id="login-btn"
+                    class="w-full bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all shadow-lg shadow-primary/25 flex items-center justify-center gap-2">
+                    <span id="login-text">Se connecter</span>
+                    <span id="login-spinner"
+                        class="hidden material-symbols-outlined animate-spin">progress_activity</span>
+                </button>
+            </form>
+
+            <div class="mt-6 pt-6 border-t border-slate-200">
+                <p class="text-center text-sm text-slate-500">
+                    Identifiants par défaut : <strong>admin / admin123</strong>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center text-sm text-slate-600">
+            <a href="index.html" class="hover:text-primary transition-colors">← Retour au site</a>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:3000/api';
+        const form = document.getElementById('login-form');
+        const errorMessage = document.getElementById('error-message');
+        const errorText = document.getElementById('error-text');
+        const loginBtn = document.getElementById('login-btn');
+        const loginText = document.getElementById('login-text');
+        const loginSpinner = document.getElementById('login-spinner');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Masquer les erreurs précédentes
+            errorMessage.classList.add('hidden');
+
+            // Afficher le spinner
+            loginBtn.disabled = true;
+            loginText.textContent = 'Connexion...';
+            loginSpinner.classList.remove('hidden');
+
+            try {
+                const response = await fetch(`${API_URL}/auth/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    // Sauvegarder le token
+                    localStorage.setItem('admin_token', data.token);
+                    localStorage.setItem('admin_user', JSON.stringify(data.user));
+
+                    // Rediriger vers le dashboard
+                    window.location.href = 'admin.html';
+                } else {
+                    // Afficher l'erreur
+                    errorText.textContent = data.error || 'Erreur de connexion';
+                    errorMessage.classList.remove('hidden');
+                }
+            } catch (error) {
+                errorText.textContent = 'Impossible de se connecter au serveur. Assurez-vous que le serveur est démarré.';
+                errorMessage.classList.remove('hidden');
+            } finally {
+                // Réinitialiser le bouton
+                loginBtn.disabled = false;
+                loginText.textContent = 'Se connecter';
+                loginSpinner.classList.add('hidden');
+            }
+        });
+
+        // Rediriger si déjà connecté
+        if (localStorage.getItem('admin_token')) {
+            window.location.href = 'admin.html';
+        }
+    </script>
+</body>
+
+</html>

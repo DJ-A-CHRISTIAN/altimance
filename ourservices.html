@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ALTIMANCE - Nos Services</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Theme Configuration -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111318] antialiased">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <!-- TopNavBar -->
+        <div id="navbar-container"></div>
+        <!-- HeroSection -->
+        <section class="bg-white dark:bg-[#111318]">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 md:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                        <div class="@container">
+                            <div class="@[480px]:p-4">
+                                <div class="relative flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-8 overflow-hidden group"
+                                    data-alt="Modern office workspace with technology overlay and blue lighting"
+                                    style='background-image: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(19, 91, 236, 0.4) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuDG_4GkOdhkRbhWMv12HTnsV1ICVawW7WhyAv46aw44sZeUGUd829K_aqeSgb35pwyHxYnc0pt-Zth3q3bXUy1DW4lk8gaWz1P9N8q25yNoNAgIf8PHoLAP14R1pdD2Punbzm9_bLu6OCTpjMm7xNBFXWhugp8TCe7XYOIKWAElzHaSpIykyzY-XsK2CuYORYS2Cng5wujgXMSgPX50ZNRMWjBSzAeXqTfV1HOtkvPgtIUIvea3o7irKjxaHtkjuzQOvYiwBoIINGd_");'>
+                                    <div class="flex flex-col gap-4 text-center z-10 max-w-[700px]">
+                                        <div
+                                            class="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 w-fit mx-auto">
+                                            <span class="text-xs font-bold text-white uppercase tracking-wider">Membre
+                                                du
+                                                Groupe Rigby</span>
+                                        </div>
+                                        <h1
+                                            class="text-white text-4xl font-black leading-tight tracking-[-0.033em] md:text-5xl lg:text-6xl">
+                                            Innover Vos Processus d'Affaires
+                                        </h1>
+                                        <h2
+                                            class="text-white/90 text-lg font-medium leading-normal max-w-[600px] mx-auto">
+                                            Solutions IT et administratives complètes taillées pour la croissance,
+                                            l'efficacité et des opérations fluides.
+                                        </h2>
+                                    </div>
+                                    <div class="flex gap-4 z-10">
+                                        <button
+                                            onclick="document.querySelector('#services-grid').scrollIntoView({behavior: 'smooth'})"
+                                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-blue-600 text-white text-base font-bold leading-normal tracking-[0.015em] transition-all shadow-lg shadow-blue-900/20">
+                                            <span class="truncate">Explorer les Services</span>
+                                        </button>
+                                        <button onclick="window.location.href='contactus.html'"
+                                            class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white text-base font-bold leading-normal tracking-[0.015em] border border-white/20 transition-all">
+                                            <span class="truncate">Contactez-nous</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FeatureSection (Our Services) -->
+        <section class="bg-background-light dark:bg-background-dark py-12" id="services-grid">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 md:px-40 flex flex-1 justify-center">
+                    <div class="layout-content-container flex flex-col max-w-[1024px] flex-1">
+                        <!-- Section Header -->
+                        <div class="flex flex-col gap-4 px-4 py-8 text-center items-center">
+                            <h2 class="text-primary font-bold tracking-widest uppercase text-sm">Notre Expertise</h2>
+                            <h1
+                                class="text-[#111318] dark:text-white tracking-tight text-3xl md:text-4xl font-black leading-tight max-w-[720px]">
+                                Services Principaux
+                            </h1>
+                            <p
+                                class="text-[#616f89] dark:text-gray-400 text-lg font-normal leading-relaxed max-w-[720px]">
+                                Nous fournissons un support spécialisé à travers trois piliers principaux pour optimiser
+                                vos opérations commerciales, vous permettant de vous concentrer sur votre mission
+                                principale.
+                            </p>
+                        </div>
+                        <!-- Services Grid -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 py-8">
+                            <!-- Card 1 -->
+                            <div
+                                class="flex flex-col flex-1 gap-5 rounded-xl border border-[#dbdfe6] dark:border-[#29303d] bg-white dark:bg-[#1e2330] p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-3xl">admin_panel_settings</span>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">
+                                        Gestion, Administration, Informatique
+                                    </h3>
+                                    <p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-relaxed">
+                                        Gestion back-office complète conçue pour rationaliser votre infrastructure.
+                                    </p>
+                                    <ul class="flex flex-col gap-2 mt-2">
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Gestion Back-office</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Administration système</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Maintenance IT continue</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Card 2 -->
+                            <div
+                                class="flex flex-col flex-1 gap-5 rounded-xl border border-[#dbdfe6] dark:border-[#29303d] bg-white dark:bg-[#1e2330] p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-3xl">support_agent</span>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">
+                                        Télémarketing &amp; Centre d'appels
+                                    </h3>
+                                    <p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-relaxed">
+                                        Services professionnels d'interaction client pour améliorer la satisfaction
+                                        client.
+                                    </p>
+                                    <ul class="flex flex-col gap-2 mt-2">
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Appels entrants &amp; sortants</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Services de télé-assistance</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Équipes de support dédiées</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- Card 3 -->
+                            <div
+                                class="flex flex-col flex-1 gap-5 rounded-xl border border-[#dbdfe6] dark:border-[#29303d] bg-white dark:bg-[#1e2330] p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+                                <div
+                                    class="size-14 rounded-lg bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-3xl">assignment</span>
+                                </div>
+                                <div class="flex flex-col gap-3">
+                                    <h3 class="text-[#111318] dark:text-white text-xl font-bold leading-tight">
+                                        Travaux Administratifs
+                                    </h3>
+                                    <p class="text-[#616f89] dark:text-gray-400 text-sm font-normal leading-relaxed">
+                                        Traitement efficace des tâches administratives essentielles pour vous garder
+                                        organisé.
+                                    </p>
+                                    <ul class="flex flex-col gap-2 mt-2">
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Rappels fournisseurs</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Suivi client</span>
+                                        </li>
+                                        <li class="flex items-start gap-2 text-sm text-[#111318] dark:text-gray-300">
+                                            <span
+                                                class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+                                            <span>Saisie &amp; traitement de données</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Trust Indicator Section -->
+        <section class="bg-white dark:bg-[#111318] py-8 border-t border-[#f0f2f4] dark:border-[#29303d]">
+            <div class="flex flex-col items-center justify-center gap-4 text-center px-4">
+                <p class="text-sm font-medium text-[#616f89] dark:text-gray-400">Filiale de Confiance du</p>
+                <div class="flex items-center gap-3 opacity-80 hover:opacity-100 transition-opacity">
+                    <!-- Placeholder logo for Groupe Rigby using text/icon since image is not provided -->
+                    <div
+                        class="flex items-center gap-2 text-[#111318] dark:text-white font-black text-2xl tracking-tighter">
+                        <span
+                            class="bg-[#111318] dark:bg-white text-white dark:text-[#111318] size-8 flex items-center justify-center rounded-md">R</span>
+                        GROUPE RIGBY
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTASection -->
+        <section class="bg-background-light dark:bg-background-dark">
+            <div class="layout-container flex h-full grow flex-col">
+                <div class="px-4 md:px-40 flex flex-1 justify-center py-5">
+                    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+                        <div class="@container">
+                            <div
+                                class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20 bg-primary/5 dark:bg-primary/10 rounded-2xl border border-primary/10 dark:border-primary/20">
+                                <div class="flex flex-col gap-4 text-center">
+                                    <h1
+                                        class="text-[#111318] dark:text-white tracking-tight text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black max-w-[720px] mx-auto">
+                                        Prêt à optimiser votre flux de travail ?
+                                    </h1>
+                                    <p
+                                        class="text-[#616f89] dark:text-gray-300 text-base font-normal leading-normal max-w-[600px] mx-auto">
+                                        Discutons de votre projet et de la manière dont nous pouvons soutenir votre
+                                        croissance avec nos services IT et administratifs spécialisés.
+                                    </p>
+                                </div>
+                                <div class="flex flex-1 justify-center pt-4">
+                                    <div class="flex justify-center w-full max-w-[300px]">
+                                        <button onclick="window.location.href='contactus.html'"
+                                            class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary hover:bg-blue-600 text-white text-base font-bold leading-normal tracking-[0.015em] transition-all shadow-lg shadow-blue-500/30">
+                                            <span class="truncate">Contactez-nous pour une Consultation</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer -->
+        <div id="footer-container"></div>
+    </div>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script src="enhanced.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Carrières - ALTIMANCE</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+
+    <main class="flex flex-col min-h-screen">
+        <!-- Hero Section -->
+        <section
+            class="relative w-full bg-gradient-to-br from-primary/5 to-blue-50 dark:from-primary/10 dark:to-background-dark py-20 md:py-32 px-4 md:px-10">
+            <div class="max-w-[1200px] mx-auto text-center">
+                <div
+                    class="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary mb-6">
+                    <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                    Rejoignez Notre Équipe
+                </div>
+                <h1
+                    class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white mb-6">
+                    Construisez Votre Carrière avec <span class="text-primary">ALTIMANCE</span>
+                </h1>
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-[700px] mx-auto leading-relaxed">
+                    La pépinière de talents où votre potentiel rencontre l'innovation. Développez vos compétences dans
+                    un environnement stimulant et bienveillant.
+                </p>
+            </div>
+        </section>
+
+        <!-- Why Join Us -->
+        <section class="py-16 md:py-24 px-4 md:px-10 bg-white dark:bg-background-dark">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-primary font-bold text-sm uppercase tracking-wider mb-2">Pourquoi Nous Rejoindre
+                    </h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Les Avantages ALTIMANCE
+                    </h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Benefit 1 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">school</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Formation Continue</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Accès à des formations certifiantes et
+                                développement professionnel constant.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 2 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">trending_up</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Évolution de Carrière</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Parcours professionnel clair avec
+                                possibilités d'avancement rapide.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 3 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">balance</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Équilibre Vie Pro/Perso
+                            </h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Télétravail, horaires flexibles et
+                                respect de votre temps personnel.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 4 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Équipe Bienveillante</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Culture d'entreprise basée sur
+                                l'entraide et la collaboration.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 5 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">workspace_premium</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Avantages Compétitifs</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Rémunération attractive, primes,
+                                mutuelle et tickets restaurant.</p>
+                        </div>
+                    </div>
+                    <!-- Benefit 6 -->
+                    <div
+                        class="flex flex-col gap-4 p-6 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 transition-all">
+                        <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined text-3xl">rocket_launch</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Projets Innovants</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Travaillez sur des technologies de
+                                pointe avec des clients prestigieux.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Positions -->
+        <section class="py-16 md:py-24 px-4 md:px-10 bg-slate-50 dark:bg-slate-900">
+            <div class="max-w-[1200px] mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Nos Offres d'Emploi
+                    </h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300">Découvrez nos opportunités actuelles</p>
+                </div>
+
+                <div id="jobs-container" class="grid grid-cols-1 gap-6 max-w-[1000px] mx-auto">
+                    <!-- Les offres d'emploi seront chargées ici dynamiquement par opportunities.js -->
+                    <div class="text-center py-12">
+                        <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400">Chargement des offres...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spontaneous Application -->
+        <section class="py-16 md:py-24 px-4 md:px-10 bg-white dark:bg-background-dark">
+            <div class="max-w-[800px] mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">Candidature Spontanée
+                    </h2>
+                    <p class="text-lg text-slate-600 dark:text-slate-300">
+                        Vous ne trouvez pas le poste idéal ? Envoyez-nous votre candidature, nous serions ravis de vous
+                        connaître !
+                    </p>
+                </div>
+                <form id="application-form"
+                    class="bg-slate-50 dark:bg-slate-800 rounded-xl p-8 border border-slate-200 dark:border-slate-700">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label
+                                class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Prénom</label>
+                            <input type="text" id="applicant-firstname"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                placeholder="Votre prénom" />
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Nom</label>
+                            <input type="text" id="applicant-lastname"
+                                class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                                placeholder="Votre nom" />
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Email</label>
+                        <input type="email" id="applicant-email"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                            placeholder="votre.email@exemple.com" />
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Téléphone</label>
+                        <input type="tel" id="applicant-phone"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                            placeholder="+33 6 XX XX XX XX" />
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Poste
+                            Recherché</label>
+                        <input type="text" id="position"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+                            placeholder="Ex: Consultant IT, Téléconseiller..." />
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">Message de
+                            Motivation</label>
+                        <textarea rows="6" id="applicant-message"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-y"
+                            placeholder="Parlez-nous de vous et de vos motivations..."></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <label class="block text-sm font-semibold text-slate-900 dark:text-white mb-2">CV (PDF, max
+                            5MB)</label>
+                        <input type="file" accept=".pdf"
+                            class="w-full px-4 py-3 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-900 dark:text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:bg-primary file:text-white file:font-semibold hover:file:bg-blue-700 transition-all" />
+                    </div>
+                    <button type="submit"
+                        class="w-full flex items-center justify-center rounded-lg h-14 px-8 bg-primary hover:bg-blue-700 transition-all text-white text-base font-bold shadow-lg shadow-primary/25">
+                        Envoyer ma Candidature
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="components.js"></script>
+    <script src="api-integration.js"></script>
+    <script src="enhanced.js"></script>
+    <script src="opportunities.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ALTIMANCE - IT Services &amp; Consulting</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#135bec",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <div id="navbar-container"></div>
+    <main class="flex flex-col min-h-screen">
+        <!-- Hero Section -->
+        <section class="relative w-full flex justify-center py-12 md:py-20 lg:py-24 px-4 md:px-10">
+            <div class="w-full max-w-[1200px] flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1 flex flex-col gap-6 text-left">
+                    <div
+                        class="inline-flex w-fit items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-semibold text-primary">
+                        <span class="w-2 h-2 rounded-full bg-primary"></span>
+                        Filiale du Groupe Rigby
+                    </div>
+                    <h1
+                        class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight text-slate-900 dark:text-white">
+                        Accélérer la Transformation Numérique avec des Solutions IT <span class="text-primary">Centrées
+                            sur l'Humain</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 max-w-[540px] leading-relaxed">
+                        Nous allions expertise mondiale et accompagnement personnalisé pour les nouvelles technologies,
+                        en veillant à ce que votre technologie travaille pour vos employés, et non l'inverse.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-2">
+                        <button onclick="window.location.href='ourservices.html'"
+                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-blue-700 transition-all text-white font-bold shadow-lg shadow-primary/25">
+                            Nos Services
+                        </button>
+                        <button onclick="window.location.href='contactus.html'"
+                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-slate-900 dark:text-white font-bold">
+                            Obtenir une Consultation
+                        </button>
+                    </div>
+                    <div class="pt-6 flex items-center gap-4 text-sm text-slate-500 font-medium">
+                        <div class="flex -space-x-2">
+                            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark bg-gray-200 bg-cover bg-center"
+                                data-alt="Portrait of a satisfied client"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyAxEX30dd493TnhH4lmknex_meEJw0JCChqRZb9yuquwDp7MOkh7Qie9TN7AuqLEeDF5zSSxDn-gIy1x0mfIUeH3HQ2y9XTyjUD0Pp-GtAoP3ENnbIeUjicsv5uJ_3p1qZlVAYYcnUTur_s9iKJfHgkPqcbp5mlaQOpS0Teoy69ezFq_ie-vhiNxgAIgMm57SRY5lgf5hk_onLvN23JCWEoiZtuXvWD3b4ilEIhHlAGsxwP9Rrr_VeFs6SX8rxkBbTN0TJirz8yIu");'>
+                            </div>
+                            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark bg-gray-300 bg-cover bg-center"
+                                data-alt="Portrait of a team member"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCJ91koj6991VVWW1w3BwoTw8qPYbz4STWnc7LGLRUWGD330GD0VevpzZ6q7O7kwuxASlPtgj6neRFECw7d88Bm364m9IxTJnQAqtqwfmugnJaW4z5uGHFJFMo2BSnt0vRjnBOyc2CYjhjDshBe3BaVLOUq8JJT0QSRxBG0v1_wxgGy3ksH-7Tbzej5AZRLjCAFL8GovVSQ3QuAm_wEHfwiyzgPM6fwdFksimlVrBda6dDsRN2xWEQm8qIEOspwMVZY5odmtWPvR6I");'>
+                            </div>
+                            <div class="w-8 h-8 rounded-full border-2 border-white dark:border-background-dark bg-gray-400 bg-cover bg-center"
+                                data-alt="Portrait of a partner"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBQwNqAgLGIsbSa65cGsaZVJZWSc59Gc0IfP1DTqX6J-ybKi-5xdbQX51dOccmqh8fA_SL-da5lmhKzGJNW8EH6h1w03atzB38gDNErPUh7RV3h1whETNa3cYCTmnRy5nZqj9Z1y4cnnLe2rQW0cEPRix6EpqOUsTlIg93lTdWBAmocrDEDQAEJsWYL2dH1zx2c2sMk35qZ8uF6NChWkcFiF_u8ZA-hv4CGJSRkGI1v78ya3-84aBvUf4NfMMArpLbDaIW7bGf4UARp");'>
+                            </div>
+                        </div>
+                        <p>Plus de 200 entreprises nous font confiance</p>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <div
+                        class="relative w-full aspect-[4/3] md:aspect-square lg:aspect-[5/4] rounded-2xl overflow-hidden shadow-2xl">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10">
+                        </div>
+                        <div class="w-full h-full bg-center bg-no-repeat bg-cover"
+                            data-alt="Two professionals discussing strategy over a tablet in a modern glass office"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAqK1jGtZeBtRSxU8ZnH0PjvwEpNsukgmqoTyYRjEJnfkAwsqJcwTsg6WVZexNWnS3sbV0rA5JpFArC8cFMpEUkTCN6pK_fURaiUv53dN82Bws3NsByIhG1lQRbBxhQ_lP1otNR77nNB6gIjMbIOe0D_TtanjM9vgjKp_mnw2_eV84Dgv4HCRqYFXKIvNGwXViS__Xkbe179fmY3nkUIDtnfAXrZCVpN1lp80sYFY_DU8jjHGlCFyE_p1dZyyiYJSiUB-c9e_c-Afvb");'>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Partners / Trust Banner -->
+        <section class="w-full py-8 border-y border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50">
+            <div
+                class="max-w-[1200px] mx-auto px-4 md:px-10 flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Simple Text Logos for demo -->
+                <span class="text-xl font-bold tracking-widest text-slate-400">MICROSOFT</span>
+                <span class="text-xl font-bold tracking-widest text-slate-400">AWS</span>
+                <span class="text-xl font-bold tracking-widest text-slate-400">CISCO</span>
+                <span class="text-xl font-bold tracking-widest text-slate-400">ORACLE</span>
+                <span class="text-xl font-bold tracking-widest text-slate-400">SALESFORCE</span>
+            </div>
+        </section>
+        <!-- Expertise Section -->
+        <section class="py-16 md:py-24 px-4 md:px-10">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-12">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-6">
+                    <div class="max-w-2xl">
+                        <h2 class="text-primary font-bold text-sm uppercase tracking-wider mb-2">Notre Expertise</h2>
+                        <h3 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Services IT Complets
+                        </h3>
+                        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                            Nous fournissons un accompagnement de bout en bout pour votre parcours de transformation
+                            numérique, assurant une intégration et une adoption fluides.
+                        </p>
+                    </div>
+                    <a class="hidden md:flex items-center gap-2 text-primary font-bold hover:gap-3 transition-all"
+                        href="ourservices.html">
+                        Voir Tous les Services <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div
+                        class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-slate-700 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">lightbulb</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Conseil &amp; Stratégie IT
+                            </h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Planification
+                                stratégique pour aligner l'IT avec vos objectifs commerciaux et maximiser le ROI.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div
+                        class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-slate-700 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">cloud</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Infrastructure Cloud</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Solutions cloud
+                                évolutives, sécurisées et résilientes, taillées pour les entreprises modernes.</p>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div
+                        class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-slate-700 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">verified_user</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Cybersécurité</h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Protocoles de
+                                protection robustes pour sauvegarder vos données critiques et actifs numériques.</p>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div
+                        class="group flex flex-col gap-4 p-6 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-primary/50 hover:shadow-lg transition-all duration-300">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-blue-50 dark:bg-slate-700 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                            <span class="material-symbols-outlined text-3xl">groups</span>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2">Accompagnement Utilisateur
+                            </h4>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Programmes de
+                                formation et support pour assurer une adoption fluide des nouvelles technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Stats / Feature Highlight -->
+        <section class="bg-white dark:bg-slate-900 py-20 px-4 md:px-10">
+            <div class="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="w-full h-48 bg-cover bg-center rounded-2xl rounded-tl-[4rem]"
+                        data-alt="Modern server room with blue lighting"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDxjegEQpSJEKYBCu3pOkpdOsLXP4QJ8xkELEGzOrAswODBt10j43jIir2hQCaHuRdJ3gCgzpbG7etTPo10eYMROqK7O9IY_nvWKiLgfVJVaZYtLQE4o9dm3f25PktzG7FpA9mlZ1bVUM3jyFmipMDHd9eKlFrYJX5E5oESVneNWtKXM1A1EV8ENeXQS4p5_JlSKvICotiC5Wn39tNp9kNyVSUnwF89qa34f71KpQMVPVHFlcCu2oFgyf9paEJ5VhTCK546rwrVlXsH");'>
+                    </div>
+                    <div class="w-full h-48 bg-cover bg-center rounded-2xl rounded-tr-[2rem] mt-8"
+                        data-alt="Business woman presenting data analytics on screen"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDDN9aYqVXZpQS9dWd6AtWBXRBNMOMyyeOs3uOuLyb9t6B2ed05J8TTOInsYBe7VrnCHq5ksBgSs-BIyYxFTMSUCGBNtuMLsGoHJNkKj-pJ8nh68ZYbqzJmCAHoXhi4Wr0myM6U5xbwQHkIYp4qo9a4edvO6nTXi9DYFEgYFwUyDSrqRC9euS2-BWGK29j4l4TY1Ee55IcFZxMVlbASu-CGZ5xS61X1GOp_G3cgd40CiVRk54Vn2Q4DzLxfj4_hGtBgkZgR5fdjxuNY");'>
+                    </div>
+                    <div class="w-full h-48 bg-cover bg-center rounded-2xl rounded-bl-[2rem] -mt-8"
+                        data-alt="Team brainstorming session with sticky notes"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcjQcqyQfT91BpSUJDUs3ZuxqobbnGYGGVZMCqmze_c3rxNco_4KdbYIhXb3f483-Dol4JFA-XSXrBzvjbQP71IiF-1t74NIZv3RwXaSvdLbIErJCxOgZdnRwHmW_5JNp1qD_PsC10N5JLGCFNJVQtNdR4o-suPalS-Y15hrHd_vC2QrlHWFDVMsWkKrNilFcU5XEVvQ_-rds7YyOzIAfGL5B_eo1s61kRFjM2Z7lHQ7rNuV3fPjHX6LFbO3H1mbohIUc2Cb1t1Epg");'>
+                    </div>
+                    <div class="w-full h-48 bg-cover bg-center rounded-2xl rounded-br-[4rem]"
+                        data-alt="Close up of coding on laptop screen"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAnnxxns_wF3FajrmS1Oa30PAHPR2ZuRaCYXUb9bSnnoH0XG3Q87-QuioNrULGq9XBb-5jZ5Zzd-Nj5xbGQTf11LMPN4v2BGF5gLQEWfI7wz4rViTygp9qEwthIRiAAGNroEcFxaRUCpXoO_JDWTuUTeBKXfN6C1U7EODlaztdVjXYMiM7tnxvQJNbQt5i3j5DBiqTzvbzqgOoAXbK-9pDrWFisJh4I75xPPIoHLwdln120i5jVxYRlEEFxiSj7bZcYoDn7xbmsdwJs");'>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-6">Autonomiser les entreprises par
+                        l'innovation.</h2>
+                    <div class="flex flex-col gap-6">
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl mt-1">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Équipe Experte</h3>
+                                <p class="text-slate-600 dark:text-slate-400">Plus de 500 professionnels certifiés prêts
+                                    à relever des défis complexes.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl mt-1">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Portée Mondiale</h3>
+                                <p class="text-slate-600 dark:text-slate-400">S'appuyant sur le réseau du Groupe Rigby
+                                    pour servir des clients dans le monde entier.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <span class="material-symbols-outlined text-primary text-3xl mt-1">check_circle</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Solutions Sur Mesure</h3>
+                                <p class="text-slate-600 dark:text-slate-400">Stratégies personnalisées conçues
+                                    spécifiquement pour les besoins de votre secteur.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Testimonials -->
+        <section class="py-20 px-4 md:px-10 bg-primary/5 dark:bg-slate-800/30">
+            <div class="max-w-[1000px] mx-auto text-center">
+                <span class="material-symbols-outlined text-6xl text-primary/20 mb-6">format_quote</span>
+                <h3 class="text-2xl md:text-4xl font-bold text-slate-900 dark:text-white mb-8 leading-tight">
+                    "ALTIMANCE a transformé notre flux de travail, mettant en œuvre des solutions cloud qui ont réduit
+                    les coûts de 30% tout en stimulant considérablement la collaboration d'équipe. Leur approche centrée
+                    sur l'humain a rendu la transition sans effort."
+                </h3>
+                <div class="flex items-center justify-center gap-4">
+                    <div class="w-12 h-12 rounded-full bg-cover bg-center" data-alt="Portrait of James Carter"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAZqKMbSU6fdomNS_ixxvweB1nbtU5ouTdjXpr2JsvLoxezSrSZG5ooVk8LFnuVpe_40jRMoT4K3cnuKF1HvaBGa0_RbA0sk8UQX2IrpSh7oU9ojsgC9v1XA-u9u7ns13KsctH-73WE_AQ4WAH1-cGfEZApcQlOhCKpUwdo2toazce9uex3BDryLEXvKHDLijNAx6sqOQyHVhAPvt0fwSGC_haO3gBrst6p55IFJTIySN8bD-JiY-KDClSD0CbXjb4NxJf-gsIhwpm");'>
+                    </div>
+                    <div class="text-left">
+                        <div class="font-bold text-slate-900 dark:text-white">James Carter</div>
+                        <div class="text-sm text-slate-600 dark:text-slate-400">CTO, TechFlow Inc.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 px-4 md:px-10 relative overflow-hidden bg-white dark:bg-background-dark">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent pointer-events-none"></div>
+            <div class="max-w-[800px] mx-auto text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6">Prêt à moderniser
+                    votre infrastructure IT ?</h2>
+                <p class="text-lg text-slate-600 dark:text-slate-300 mb-10">Rejoignez des centaines d'entreprises qui
+                    accélèrent leur croissance avec ALTIMANCE.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <button onclick="window.location.href='contactus.html'"
+                        class="flex items-center justify-center rounded-lg h-14 px-10 bg-primary hover:bg-blue-700 transition-colors text-white text-lg font-bold shadow-xl shadow-primary/30">
+                        Commencer
+                    </button>
+                    <button onclick="window.location.href='contactus.html'"
+                        class="flex items-center justify-center rounded-lg h-14 px-10 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors text-slate-900 dark:text-white text-lg font-bold">
+                        Contacter les Ventes
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    <script src="components.js"></script>
+    <script src="main.js"></script>
+    <script src="enhanced.js"></script>
+</body>
+
+</html>
+```
